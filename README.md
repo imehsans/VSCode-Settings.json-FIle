@@ -1,5 +1,9 @@
+
+
 # VSCode-Settings.json-FIle
 
+
+//__________________________________________
 {
 	"liveServer.settings.donotShowInfoMsg": true,
 	"emmet.includeLanguages": {
@@ -79,3 +83,5 @@
 	"editor.linkedEditing": true,
 	"tabnine.experimentalAutoImports": true
 }
+//___________________________________
+

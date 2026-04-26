@@ -1,82 +1,472 @@
 {
-	"workbench.sideBar.location": "right",
-	"liveServer.settings.donotShowInfoMsg": true,
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact"
-	},
-	"explorer.confirmDelete": false,
-	"git.autofetch": true,
-	"git.enableSmartCommit": true,
-	"git.confirmSync": false,
-	"security.workspace.trust.untrustedFiles": "open",
-	"vsicons.dontShowNewVersionMessage": true,
+  // ╔══════════════════════════════════════════════════════════════════════╗
+  //   🚀  ULTRA PRO DEVELOPER — VS CODE SETTINGS
+  //   Sync → Settings Sync → Sign in with GitHub
+  //   Auto-downloads everything on every new machine. Zero setup. Ever again.
+  // ╚══════════════════════════════════════════════════════════════════════╝
 
-	"git.allowForcePush": true,
-	"git.allowNoVerifyCommit": true,
-	"git.alwaysShowStagedChangesResourceGroup": true,
 
-	"emmet.triggerExpansionOnTab": true,
-	"javascript.implicitProjectConfig.checkout": true,
-	"rainbowTags.allowEverywhere": true,
-	"workbench.iconTheme": "vscode-icons",
-	"workbench.colorTheme": "Andromeda Italic Bordered",
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true
-	},
-	"[json]": {
-		"editor.quickSuggestions": {
-			"strings": true
-		},
-		"editor.suggest.insertMode": "replace",
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true
-	},
-	"[scss]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true
-	},
-	"typescript.preferences.quoteStyle": "double",
-	"htmlhint.documentSelector": ["html", "htm"],
-	"htmlhint.enable": true,
-	"html.format.enable": false,
-	"eslint.alwaysShowStatus": true,
-	"editor.formatOnPaste": true,
-	"prettier.semi": false,
-	"prettier.requireConfig": false,
-	"editor.fontsize": 20,
-	"editor.fontFamily": "Fira Code semibold,consolas, 'corior New', monospace",
-	"editor.fontLigatures": true,
-	"files.autoSave": "onFocusChange",
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"editor.formatOnSave": true,
-	"prettier.endOfLine": "auto",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"prettier.singleQuote": true,
-	"editor.wordWrap": "wordWrapColumn",
-	"prettier.useTabs": true,
-	"editor.fontSize": 14,
-	"editor.mouseWheelZoom": true,
-	"explorer.confirmDragAndDrop": false,
-	"javascript.suggest.autoImports": false,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.organizeImports": true
-	},
-	"settingsSync.ignoredSettings": [],
-	"[css]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.suggest.insertMode": "replace"
-	},
-	"window.zoomLevel": 0,
-	"editor.tabSize": 3,
-	"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-	"editor.linkedEditing": true,
-	"tabnine.experimentalAutoImports": true,
-	"rapidapi.terminalLink.enabled": false,
-	"typescript.updateImportsOnFileMove.enabled": "always"
+  // ████████████████████████████████████████████████████████████████████
+  //  1.  EDITOR — CORE LOOK & FEEL
+  // ████████████████████████████████████████████████████████████████████
+
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.65,
+  "editor.letterSpacing": 0.3,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "editor.mouseWheelZoom": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.scrollBeyondLastLine": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 120,
+  "editor.minimap.autohide": true,
+  "editor.rulers": [80, 120],
+  "editor.linkedEditing": true,
+  "editor.colorDecorators": true,
+  "editor.showFoldingControls": "mouseover",
+  "editor.foldingHighlight": true,
+  "editor.glyphMargin": true,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  2.  INTELLISENSE — THE BRAIN  🧠
+  //      Every trigger, every source, every language — all ON.
+  // ████████████████████████████████████████████████████████████████████
+
+  // Inline ghost-text (Copilot / Tabnine style)
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "editor.inlineSuggest.suppressSuggestions": false,
+
+  // Suggestion popup — fires in ALL contexts
+  "editor.quickSuggestions": {
+    "other":    "on",   // variables, keywords, identifiers
+    "comments": "on",   // even inside comments
+    "strings":  "on"    // import paths, object keys, string values
+  },
+  "editor.quickSuggestionsDelay": 0,
+
+  // What appears in the suggestion list
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showColors": true,
+  "editor.suggest.showConstants": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showDeprecated": false,
+  "editor.suggest.showEnumMembers": true,
+  "editor.suggest.showEnums": true,
+  "editor.suggest.showEvents": true,
+  "editor.suggest.showFields": true,
+  "editor.suggest.showFiles": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showInterfaces": true,
+  "editor.suggest.showIssues": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showModules": true,
+  "editor.suggest.showOperators": true,
+  "editor.suggest.showProperties": true,
+  "editor.suggest.showReferences": true,
+  "editor.suggest.showStructs": true,
+  "editor.suggest.showTypeParameters": true,
+  "editor.suggest.showUnits": true,
+  "editor.suggest.showUsers": true,
+  "editor.suggest.showValues": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showWords": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.filterGraceful": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.tabCompletion": "onlySnippets",
+
+  // Hover docs & parameter hints
+  "editor.hover.enabled": true,
+  "editor.hover.delay": 300,
+  "editor.hover.sticky": true,
+  "editor.parameterHints.enabled": true,
+  "editor.parameterHints.cycle": true,
+
+  // Inlay hints (inline type annotations)
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.fontSize": 11,
+  "editor.inlayHints.padding": true,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  3.  TYPESCRIPT — FULL INTELLIGENCE
+  // ████████████████████████████████████████████████████████████████████
+
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.suggest.includeCompletionsForImportStatements": true,
+  "typescript.suggest.includeCompletionsWithSnippetText": true,
+  "typescript.suggest.jsdoc.generateReturns": true,
+  "typescript.suggest.objectLiteralMethodSnippets.enabled": true,
+  "typescript.autoClosingTags": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": false,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  4.  JAVASCRIPT — FULL INTELLIGENCE
+  // ████████████████████████████████████████████████████████████████████
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "javascript.suggest.includeCompletionsForImportStatements": true,
+  "javascript.suggest.names": true,
+  "javascript.suggest.paths": true,
+  "javascript.suggest.objectLiteralMethodSnippets.enabled": true,
+  "javascript.autoClosingTags": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "literals",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  5.  EMMET — SUPERCHARGED HTML / JSX EXPANSION
+  // ████████████████████████████████████████████████████████████████████
+
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.optimizeStylesheetParsing": true,
+  "emmet.includeLanguages": {
+    "javascript":  "javascriptreact",
+    "typescript":  "typescriptreact",
+    "vue-html":    "html",
+    "razor":       "html",
+    "plaintext":   "html"
+  },
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  6.  CODE ACTIONS ON SAVE
+  // ████████████████████████████████████████████████████████████████████
+
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never",
+    "source.fixAll": "never"
+  },
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  7.  BRACKETS, PAIRS & HIGHLIGHTING
+  // ████████████████████████████████████████████████████████████████████
+
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.occurrencesHighlight": "singleFile",
+  "editor.selectionHighlight": true,
+  "editor.matchBrackets": "always",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoSurround": "languageDefined",
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  8.  PRETTIER
+  // ████████████████████████████████████████████████████████████████████
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": false,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.bracketSpacing": true,
+  "prettier.bracketSameLine": false,
+  "prettier.arrowParens": "always",
+  "prettier.endOfLine": "lf",
+  "prettier.requireConfig": false,
+  "prettier.proseWrap": "preserve",
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  9.  LANGUAGE-SPECIFIC FORMATTERS
+  // ████████████████████████████████████████████████████████████████████
+
+  "[html]":             { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[css]":              { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true, "editor.suggest.insertMode": "replace" },
+  "[scss]":             { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[less]":             { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[javascript]":       { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[javascriptreact]":  { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[typescript]":       { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[typescriptreact]":  { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[json]":             { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true, "editor.quickSuggestions": { "strings": true }, "editor.suggest.insertMode": "replace" },
+  "[jsonc]":            { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[yaml]":             { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[markdown]":         { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.wordWrap": "on", "editor.formatOnSave": true },
+  "[graphql]":          { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true },
+  "[python]":           { "editor.defaultFormatter": "ms-python.black-formatter", "editor.formatOnSave": true },
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  10.  ESLINT
+  // ████████████████████████████████████████████████████████████████████
+
+  "eslint.validate": [
+    "javascript", "javascriptreact",
+    "typescript", "typescriptreact",
+    "vue", "astro"
+  ],
+  "eslint.run": "onSave",
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.format.enable": false,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  11.  GIT + GITLENS
+  // ████████████████████████████████████████████████████████████████████
+
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.allowForcePush": true,
+  "git.allowNoVerifyCommit": true,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.fetchOnPull": true,
+  "git.pruneOnFetch": true,
+  "git.showPushSuccessNotification": true,
+  "git.decorations.enabled": true,
+  "git.openRepositoryInParentFolders": "always",
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.pushBranch": "always",
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": true,
+  "gitlens.blame.compact": true,
+  "gitlens.graph.layout": "editor",
+  "gitlens.statusBar.enabled": true,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  12.  TERMINAL
+  // ████████████████████████████████████████████████████████████████████
+
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "'Fira Code', 'MesloLGS NF', monospace",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.rightClickBehavior": "copyPaste",
+  "terminal.integrated.tabs.enabled": true,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  13.  FILES & SEARCH
+  // ████████████████████████████████████████████████████████████████████
+
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.turbo/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "search.smartCase": true,
+
+  //  14.  EXPLORER — FILE NESTING
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts":             "${capture}.js, ${capture}.d.ts, ${capture}.test.ts, ${capture}.spec.ts",
+    "*.tsx":            "${capture}.module.css, ${capture}.test.tsx, ${capture}.stories.tsx",
+    "package.json":     "package-lock.json, yarn.lock, pnpm-lock.yaml, .npmrc, .nvmrc, .node-version, .yarnrc.yml",
+    "tsconfig.json":    "tsconfig.*.json",
+    ".env":             ".env.*, .envrc, .env.local, .env.example",
+    "vite.config.*":    "vitest.config.*, vite.config.ts",
+    "next.config.*":    "next-env.d.ts, next-i18next.config.*",
+    ".eslintrc*":       ".eslintignore, .prettierrc*, .prettierignore, .stylelintrc*",
+    "tailwind.config.*":"postcss.config.*",
+    "README*":          "CHANGELOG*, LICENSE, CONTRIBUTING*, .editorconfig"
+  },
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  15.  WORKBENCH — LAYOUT & THEME
+  // ████████████████████████████████████████████████████████████████████
+
+  "workbench.colorTheme": "Andromeda Colorizer",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.list.smoothScrolling": true,
+  "workbench.activityBar.location": "top",
+  "workbench.editorAssociations": { "*.eps": "default" },
+  "window.zoomLevel": 0,
+  "window.title": "${rootName}  ·  ${activeEditorShort}",
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  16.  SETTINGS SYNC — Auto push/pull via GitHub
+  // ████████████████████████████████████████████████████████████████████
+
+  "settingsSync.ignoredSettings": [],
+  "settingsSync.ignoredExtensions": [],
+  "settingsSync.keybindingsPerPlatform": true,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  17.  EXTENSION — ERROR LENS
+  // ████████████████████████████████████████████████████████████████████
+
+  "errorLens.enabled": true,
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+  "errorLens.followCursor": "activeLine",
+  "errorLens.delay": 200,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  18.  EXTENSION — TODO HIGHLIGHT
+  // ████████████████████████████████████████████████████████████████████
+
+  "todohighlight.isCaseSensitive": false,
+  "todohighlight.keywords": [
+    { "text": "TODO:",  "color": "#ff8c00", "backgroundColor": "transparent", "fontWeight": "bold" },
+    { "text": "FIXME:", "color": "#ff4444", "backgroundColor": "transparent", "fontWeight": "bold" },
+    { "text": "HACK:",  "color": "#cc66ff", "backgroundColor": "transparent", "fontWeight": "bold" },
+    { "text": "NOTE:",  "color": "#3399ff", "backgroundColor": "transparent", "fontWeight": "bold" },
+    { "text": "BUG:",   "color": "#ff0000", "backgroundColor": "transparent", "fontWeight": "bold" }
+  ],
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  19.  EXTENSION — PATH INTELLISENSE
+  // ████████████████████████████████████████████████████████████████████
+
+  "path-intellisense.mappings": {
+    "@": "${workspaceFolder}/src",
+    "~": "${workspaceFolder}"
+  },
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.extensionOnImport": false,
+  "path-intellisense.showHiddenFiles": false,
+
+
+  // ████████████████████████████████████████████████████████████████████
+  //  20.  EXTENSION — SPELL CHECK, PEACOCK, YAML, MISC
+  // ████████████████████████████████████████████████████████████████████
+
+  "cSpell.userWords": [
+    "formik", "nextjs", "zustand", "trpc", "drizzle", "prisma",
+    "supabase", "vercel", "tailwind", "shadcn", "tanstack",
+    "vite", "vitest", "astro", "nuxtjs", "pnpm", "zod",
+    "useState", "useEffect", "useRef", "useCallback",
+    "useMemo", "useContext", "useReducer", "readonly", "typeorm"
+  ],
+  "peacock.showColorInStatusBar": true,
+  "peacock.affectActivityBar": true,
+  "peacock.affectStatusBar": true,
+  "yaml.format.enable": true,
+  "yaml.validate": true,
+  "yaml.hover": true,
+  "yaml.completion": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "rainbowTags.allowEverywhere": true,
+  "htmlhint.enable": true,
+  "html.format.enable": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "docker.extension.enableComposeLanguageServer": false,
+  "tabnine.experimentalAutoImports": true,
+  "diffEditor.maxComputationTime": 0,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "breadcrumbs.enabled": true,
+  "problems.showCurrentInStatus": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.autoCheckUpdates": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.menuBarVisibility": "compact",
+  "workbench.sideBar.location": "right"
 }
